@@ -1,0 +1,21 @@
+{
+  "name": "lisp2js",
+  "version": "0.0.1",
+  "description": "用js模拟lisp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyhacker2/lisp2js.git"
+  },
+  "keywords": [
+    "lisp"
+  ],
+  "author": "eleven",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/skyhacker2/lisp2js/issues"
+  }
+}
