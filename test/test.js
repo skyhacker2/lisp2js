@@ -1,6 +1,7 @@
 var lisp = require('../lib/lisp');
 var expect = require('expect.js');
 var sqrt = require('../lib/sqrt');
+var tree = require('../lib/tree');
 var arr = [1, 2, 3, 4];
 describe('lisp.js', function(){
   	describe('#car', function(){
@@ -50,6 +51,24 @@ describe('lisp.js', function(){
   			expect(l1).to.be.eql([1,3]);
   		});
   	});
+    describe('#cadr', function() {
+      it('should return 2 when cadr([1,2,3,4])', function() {
+        var arr = [1, 2, 3, 4];
+        expect(lisp.cadr(arr)).to.be.eql(2);
+      });
+    });
+    describe('#caddr', function() {
+      it('should return 3 when caddr([1,2,3,4])', function() {
+        var arr = [1, 2, 3, 4];
+        expect(lisp.caddr(arr)).to.be.eql(3);
+      });
+    });
+    describe('#list', function() {
+      it('should return [1,2,3,4] when list(1,2,3,4)', function() {
+        expect(lisp.list(1,2,3,4)).to.be.eql([1,2,3,4]);
+        expect(lisp.list(1,2,3,4).length).to.be.eql(4);
+      });
+    });
 });
 describe('sqrt.js', function() {
 	describe('#sqrt', function() {
@@ -62,4 +81,4 @@ describe('sqrt.js', function() {
 			expect(Math.abs(Math.pow(s,2)-5)).to.be.lessThan(0.001);
 		});
 	});
-})
+});
